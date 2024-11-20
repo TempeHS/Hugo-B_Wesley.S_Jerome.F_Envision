@@ -5,3 +5,4 @@ Wesley: https://github.com/TempeHS/TempeHS_Ardunio_Boilerplate/tree/main/TempeHS
 
 
 Hugo: https://github.com/TempeHS/TempeHS_Ardunio_Boilerplate/tree/main/TempeHS_Sensor_Catalogue
+Sound sensor pin D6
