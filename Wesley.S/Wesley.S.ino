@@ -1,5 +1,4 @@
 
-#include "ultrasonic.h"
 #include <Servo.h>
 
 // pin for sensor
@@ -37,16 +36,16 @@ void loop() {
   duration = pulseIn(ultrasonicPin, HIGH);
 
   // distance in cm
-  distance = duration * 0.034 / 2;
+  distance = duration * 0.035 / 2;
 
   // distance to the Serial Monitor
   Serial.println(distance);
 
   // sound if the object is closer than 1 metre
-  if (distance > 0 && distance < 100) { // Ignore 0 distance
-    tone(speakerPin, 1000, 200); // Sound at 1000 Hz for 200ms
+  if (distance > 0 && distance < 150) { // Ignore 0 distance
+    tone(speakerPin, 100, 100); 
   } else {
-    noTone(speakerPin); // Turn off sound if no object or too far
+    noTone(speakerPin); 
   }
 
   delay(1000); 
