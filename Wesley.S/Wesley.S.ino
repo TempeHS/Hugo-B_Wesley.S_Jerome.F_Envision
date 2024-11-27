@@ -1,4 +1,5 @@
 
+#include "ultrasonic.h"
 #include <Servo.h>
 
 // pin for sensor
