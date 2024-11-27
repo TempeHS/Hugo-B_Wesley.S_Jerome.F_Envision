@@ -11,17 +11,24 @@
 // This is a different Ultrasonic Library to the one we used in the bootcamp becuase we are using a Seead grove sensor not a generic 4 pin Ultrasonic sensor
 #include "Ultrasonic.h"
 
-Ultrasonic mySensor(5);
+Ultrasonic ultrasonic(7);
 void setup()
 {
  Serial.begin(9600);
 }
 void loop()
 {
-  long RangeInCentimeters;
+ unsigned long RangeInInches;
+ unsigned long RangeInCentimeters;
 
-  RangeInCentimeters = mySensor.MeasureInCentimeters; // two measurements should keep an interval
-  Serial.print(RangeInCentimeters);//0~400cm
-  Serial.println("5 cm");
-  delay(250);
+ Serial.println("Distance:");
+ RangeInInches = ultrasonic.MeasureInInches();
+ Serial.print(RangeInInches);//0~157 inches
+ Serial.println(" inch");
+ delay(250);
+
+ RangeInCentimeters = ultrasonic.MeasureInCentimeters(); // two measurements should keep an interval
+ Serial.print(RangeInCentimeters);//0~400cm
+ Serial.println(" cm");
+ delay(250); 
 }
