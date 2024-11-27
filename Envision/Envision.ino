@@ -1,29 +1,23 @@
 
 #include <Servo.h>
 
-// pin for sensor
+// pins
 const int ultrasonicPin = 7;
-
-// pin for speaker
 const int speakerPin = 6;
 
-// Variables for distance measurement
+// distance measurement
 long duration;
 int distance;
 
 void setup() {
-  // Initialize serial communication
+
   Serial.begin(9600);
-
-  // Set up the ultrasonic sensor pin
   pinMode(ultrasonicPin, OUTPUT);
-
-  // Set up the speaker pin
   pinMode(speakerPin, OUTPUT);
 }
 
 void loop() {
-  // Trigger the ultrasonic sensor
+  // trigger the ultrasonic sensor
   pinMode(ultrasonicPin, OUTPUT); 
   digitalWrite(ultrasonicPin, LOW);
   delayMicroseconds(2);
@@ -42,7 +36,7 @@ void loop() {
   Serial.println(distance);
 
   // sound if the object is closer than 1 metre
-  if (distance > 0 && distance < 150) { // Ignore 0 distance
+  if (distance > 0 && distance < 150) { 
     tone(speakerPin, 1000, 100); 
   } else {
     noTone(speakerPin); 
