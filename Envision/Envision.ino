@@ -16,7 +16,7 @@ void setup() {
 }
 
 void loop() {
-
+  
   pinMode(ultrasonicPin, OUTPUT); 
   digitalWrite(ultrasonicPin, LOW);
   delayMicroseconds(2);
@@ -32,6 +32,7 @@ void loop() {
   Serial.println(distance);
 
   if (distance > 30 && distance < 150) { 
+
     tone(speakerPin, 1000, 100); 
   } else {
     noTone(speakerPin); 
