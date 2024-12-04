@@ -31,7 +31,7 @@
     Serial.println(distance);
 
   
-    if (distance > 5 && distance < 100) { 
+    if (distance > 3 && distance < 100) { 
       int beepDelay = map(distance, 5, 25, 50, 100);
     
       tone(speakerPin, 1000, 100); 
