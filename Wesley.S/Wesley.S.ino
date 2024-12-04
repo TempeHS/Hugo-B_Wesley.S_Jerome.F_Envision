@@ -19,7 +19,7 @@ void setup() {
   pinMode(ultrasonicPin, OUTPUT);
 
   // Set up the speaker pin
-  pinMode(speakerPin, OUTPUT);
+  pinMode(speakerPin, OUTPUT)
 }
 
 void loop() {
@@ -43,7 +43,7 @@ void loop() {
 
   // sound if the object is closer than 1 metre
   if (distance > 0 && distance < 150) { // Ignore 0 distance
-    tone(speakerPin, 100, 100); 
+    tone(speakerPin, 1000, 100); 
   } else {
     noTone(speakerPin); 
   }
