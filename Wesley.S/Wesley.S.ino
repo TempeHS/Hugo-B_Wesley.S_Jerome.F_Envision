@@ -19,7 +19,7 @@ void setup() {
   pinMode(ultrasonicPin, OUTPUT);
 
   // Set up the speaker pin
-  pinMode(speakerPin, OUTPUT);
+  pinMode(speakerPin, OUTPUT)
 }
 
 void loop() {
