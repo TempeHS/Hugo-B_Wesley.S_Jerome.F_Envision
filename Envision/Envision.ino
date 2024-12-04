@@ -31,8 +31,12 @@ void loop() {
 
   Serial.println(distance);
 
+<<<<<<< HEAD
   if (distance > 30 && distance < 150) { 
 
+=======
+  if (distance > 30 && distance < 100) { 
+>>>>>>> 520a001fa234d0653f76e1e19394d21b2b6aa28e
     tone(speakerPin, 1000, 100); 
   } else {
     noTone(speakerPin); 
